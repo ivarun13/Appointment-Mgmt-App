@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "appointments",
+            "otherEntityName": "appointment",
+            "otherEntityRelationshipName": "date"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20170208060623",
+    "entityTableName": "day",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

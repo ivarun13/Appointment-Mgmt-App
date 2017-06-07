@@ -1,0 +1,25 @@
+{
+    "schedulyApp": {
+        "weekDay" : {
+            "home": {
+                "title": "WeekDays",
+                "createLabel": "नया Week Day बनाएँ",
+                "createOrEditLabel": "Week Day बनाएँ या संपादित करें",
+                "search": "Week Day खोजें"
+            },
+            "created": "एक नया Week Day [identifier: {{ param }}] तैयार है",
+            "updated": "एक Week Day [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Week Day [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Week Day [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Week Day"
+            },
+            "available": "Available",
+            "startLimit": "Start Limit",
+            "endLimit": "End Limit",
+            "event": "Event"
+        }
+    }
+}

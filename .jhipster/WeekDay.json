@@ -1,0 +1,30 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "event",
+            "otherEntityName": "event",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "available",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "startLimit",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "endLimit",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170208060624",
+    "entityTableName": "week_day",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}

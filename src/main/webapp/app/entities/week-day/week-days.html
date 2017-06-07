@@ -1,0 +1,64 @@
+<div>
+    <h2 data-translate="schedulyApp.weekDay.home.title">Week Days</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="week-day.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="schedulyApp.weekDay.home.createLabel">
+                        Create new Week Day
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="schedulyApp.weekDay.available">Available</span></th>
+                    <th><span data-translate="schedulyApp.weekDay.startLimit">Start Limit</span></th>
+                    <th><span data-translate="schedulyApp.weekDay.endLimit">End Limit</span></th>
+                    <th><span data-translate="schedulyApp.weekDay.event">Event</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="weekDay in vm.weekDays track by weekDay.id">
+                    <td><a ui-sref="week-day-detail({id:weekDay.id})">{{weekDay.id}}</a></td>
+                    <td>{{weekDay.available}}</td>
+                    <td>{{weekDay.startLimit}}</td>
+                    <td>{{weekDay.endLimit}}</td>
+                    <td>
+                        <a ui-sref="event-detail({id:weekDay.event.id})">{{weekDay.event.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="week-day-detail({id:weekDay.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="week-day.edit({id:weekDay.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="week-day.delete({id:weekDay.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

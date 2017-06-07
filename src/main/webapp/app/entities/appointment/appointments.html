@@ -1,0 +1,76 @@
+<div>
+    <h2 data-translate="schedulyApp.appointment.home.title">Appointments</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="appointment.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="schedulyApp.appointment.home.createLabel">
+                        Create new Appointment
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.reset()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="startTime"><span data-translate="schedulyApp.appointment.startTime">Start Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="endTime"><span data-translate="schedulyApp.appointment.endTime">End Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="available"><span data-translate="schedulyApp.appointment.available">Available</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="invitee.id"><span data-translate="schedulyApp.appointment.invitee">Invitee</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="user.id"><span data-translate="schedulyApp.appointment.user">User</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="event.id"><span data-translate="schedulyApp.appointment.event">Event</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="date.id"><span data-translate="schedulyApp.appointment.date">Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody infinite-scroll="vm.loadPage(vm.page + 1)" infinite-scroll-disabled="vm.page >= vm.links['last']">
+                <tr ng-repeat="appointment in vm.appointments track by appointment.id">
+                    <td><a ui-sref="appointment-detail({id:appointment.id})">{{appointment.id}}</a></td>
+                    <td>{{appointment.startTime | date:'medium'}}</td>
+                    <td>{{appointment.endTime | date:'medium'}}</td>
+                    <td>{{appointment.available}}</td>
+                    <td>
+                        <a ui-sref="invitee-detail({id:appointment.invitee.id})">{{appointment.invitee.id}}</a>
+                    </td>
+                    <td>
+                        {{appointment.user.id}}
+                    </td>
+                    <td>
+                        <a ui-sref="event-detail({id:appointment.event.id})">{{appointment.event.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="day-detail({id:appointment.date.id})">{{appointment.date.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="appointment-detail({id:appointment.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="appointment.edit({id:appointment.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="appointment.delete({id:appointment.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

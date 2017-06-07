@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="schedulyApp.invitee.detail.title">Invitee</span> {{vm.invitee.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="schedulyApp.invitee.name">Name</span></dt>
+        <dd>
+            <span>{{vm.invitee.name}}</span>
+        </dd>
+        <dt><span data-translate="schedulyApp.invitee.email">Email</span></dt>
+        <dd>
+            <span>{{vm.invitee.email}}</span>
+        </dd>
+        <dt><span data-translate="schedulyApp.invitee.contact">Contact</span></dt>
+        <dd>
+            <span>{{vm.invitee.contact}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="invitee-detail.edit({id:vm.invitee.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="schedulyApp.event.detail.title">Event</span> {{vm.event.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="schedulyApp.event.name">Name</span></dt>
+        <dd>
+            <span>{{vm.event.name}}</span>
+        </dd>
+        <dt><span data-translate="schedulyApp.event.timeLength">Time Length</span></dt>
+        <dd>
+            <span>{{vm.event.timeLength}}</span>
+        </dd>
+        <dt><span data-translate="schedulyApp.event.url">Url</span></dt>
+        <dd>
+            <span>{{vm.event.url}}</span>
+        </dd>
+        <dt><span data-translate="schedulyApp.event.description">Description</span></dt>
+        <dd>
+            <span>{{vm.event.description}}</span>
+        </dd>
+        <dt><span data-translate="schedulyApp.event.maxInvitee">Max Invitee</span></dt>
+        <dd>
+            <span>{{vm.event.maxInvitee}}</span>
+        </dd>
+        <dt><span data-translate="schedulyApp.event.rollingDays">Rolling Days</span></dt>
+        <dd>
+            <span>{{vm.event.rollingDays}}</span>
+        </dd>
+        <dt><span data-translate="schedulyApp.event.user">User</span></dt>
+        <dd>
+            {{vm.event.user.id}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="event-detail.edit({id:vm.event.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

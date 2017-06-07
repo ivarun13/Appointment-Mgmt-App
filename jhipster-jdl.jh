@@ -1,0 +1,53 @@
+entity Event {
+	name String required,
+	timeLength Integer required,
+	url String required,
+	description String required,
+    maxInvitee Integer,
+    rollingDays Integer required
+}
+
+entity Appointment {
+    startTime ZonedDateTime,
+    endTime ZonedDateTime,
+    available Boolean,
+}
+
+entity Invitee {
+	name String required,
+    email String required,
+  	contact String
+}
+
+entity Day {
+	date LocalDate
+}
+
+entity WeekDay {
+	available Boolean,
+    startLimit Integer,
+    endLimit Integer
+}
+
+relationship OneToMany {
+	Event{appointments} to Appointment{event},
+    Event{weekdays} to WeekDay,
+    Day{appointments} to Appointment{date}
+}
+
+relationship OneToOne {
+	Appointment{invitee} to Invitee
+}
+
+relationship ManyToOne {
+	Event{user} to User,
+    Appointment{user} to User   
+}
+
+paginate Appointment with infinite-scroll
+
+
+service all with serviceImpl except Invitee
+
+
+

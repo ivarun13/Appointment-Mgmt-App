@@ -1,0 +1,25 @@
+{
+    "schedulyApp": {
+        "weekDay" : {
+            "home": {
+                "title": "Week Days",
+                "createLabel": "Create a new Week Day",
+                "createOrEditLabel": "Create or edit a Week Day",
+                "search": "Search for Week Day"
+            },
+            "created": "A new Week Day is created with identifier {{ param }}",
+            "updated": "A Week Day is updated with identifier {{ param }}",
+            "deleted": "A Week Day is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Week Day {{ id }}?"
+            },
+            "detail": {
+                "title": "Week Day"
+            },
+            "available": "Available",
+            "startLimit": "Start Limit",
+            "endLimit": "End Limit",
+            "event": "Event"
+        }
+    }
+}

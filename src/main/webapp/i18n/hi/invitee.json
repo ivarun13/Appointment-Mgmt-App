@@ -1,0 +1,24 @@
+{
+    "schedulyApp": {
+        "invitee" : {
+            "home": {
+                "title": "Invitees",
+                "createLabel": "नया Invitee बनाएँ",
+                "createOrEditLabel": "Invitee बनाएँ या संपादित करें",
+                "search": "Invitee खोजें"
+            },
+            "created": "एक नया Invitee [identifier: {{ param }}] तैयार है",
+            "updated": "एक Invitee [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Invitee [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Invitee [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Invitee"
+            },
+            "name": "Name",
+            "email": "Email",
+            "contact": "Contact"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "schedulyApp": {
+        "invitee" : {
+            "home": {
+                "title": "Invitees",
+                "createLabel": "Create a new Invitee",
+                "createOrEditLabel": "Create or edit a Invitee",
+                "search": "Search for Invitee"
+            },
+            "created": "A new Invitee is created with identifier {{ param }}",
+            "updated": "A Invitee is updated with identifier {{ param }}",
+            "deleted": "A Invitee is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Invitee {{ id }}?"
+            },
+            "detail": {
+                "title": "Invitee"
+            },
+            "name": "Name",
+            "email": "Email",
+            "contact": "Contact"
+        }
+    }
+}

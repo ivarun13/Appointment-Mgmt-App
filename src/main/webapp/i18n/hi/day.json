@@ -1,0 +1,23 @@
+{
+    "schedulyApp": {
+        "day" : {
+            "home": {
+                "title": "Days",
+                "createLabel": "नया Day बनाएँ",
+                "createOrEditLabel": "Day बनाएँ या संपादित करें",
+                "search": "Day खोजें"
+            },
+            "created": "एक नया Day [identifier: {{ param }}] तैयार है",
+            "updated": "एक Day [identifier: {{ param }}] का अद्यतन हुआ है",
+            "deleted": "Day [identifier: {{ param }}] हटा दिया है",
+            "delete": {
+                "question": "Day [id: {{ id }}] हटाने की पुष्टि करें"
+            },
+            "detail": {
+                "title": "Day"
+            },
+            "date": "Date",
+            "appointments": "Appointments"
+        }
+    }
+}
